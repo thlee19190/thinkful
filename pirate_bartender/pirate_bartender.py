@@ -49,7 +49,14 @@ def main():
 
 
 if __name__ == '__main__':
-  main()
+  approve = True
+  while approve == True:
+    main()
+    temp1 = str(raw_input("Would you like another? If no, please enter n or no: ").lower())
+    if temp1 == "no" or "n":
+      print "Thanks for your patronage!"
+      approve = False
+      
       
       
       
