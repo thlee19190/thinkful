@@ -30,7 +30,7 @@ def picking_pref():
 def cons_drink(quest_ans):
   drinks = []
   for key2 in quest_ans:
-    if quest_ans[key2] == True:
+    if quest_ans[key2]:
       drinks.append(random.choice(ingredients[key2]))
     else:
       continue
