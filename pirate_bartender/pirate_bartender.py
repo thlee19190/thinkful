@@ -35,11 +35,21 @@ def cons_drink(quest_ans):
     else:
       continue
   return drinks    
-  
+
+def main():
+  pref1 = picking_pref()
+  drink1 = cons_drink(pref1)
+  print "Those are some good preferences"
+  print "There are a lot of good ingredients in there..."
+  for ingred in drink1:
+    print "A {}".format(ingred)
+  firstName = str(raw_input("What would you like to be the first name of your drink? (name an adjective) "))
+  secondName = str(raw_input("What would you like to be the second name of your drink? (name a noun) "))
+  print ("It has been decided! Your drink name is the %s %s!") % (firstName, secondName)
+
+
 if __name__ == '__main__':
-  answers = picking_pref()
-  answers2 = cons_drink(answers)
-  print answers2
+  main()
       
       
       
